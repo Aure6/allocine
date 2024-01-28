@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
 
         // appeler les seeders dans l'ordre pour éviter les erreurs de clés étrangères
         $this->call([
+            CategorySeeder::class,
             WorkSeeder::class,
             ReviewSeeder::class,
         ]);
