@@ -15,8 +15,8 @@ class Review extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function work(): BelongsTo
+    public function media(): BelongsTo
     {
-        return $this->belongsTo(Work::class);
+        return $this->belongsTo(Media::class);
     }
 }

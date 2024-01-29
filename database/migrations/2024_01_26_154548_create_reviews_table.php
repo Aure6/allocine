@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Media;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,7 +16,9 @@ return new class extends Migration
             $table->id();
 
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('work_id')->constrained()->cascadeOnDelete();
+            // $table->foreignId('media_id')->constrained()->cascadeOnDelete();
+            // $table->foreignIdFor(Media::class)->constrained()->cascadeOnDelete();
+            $table->foreignIdFor(Media::class)->constrained('media')->cascadeOnDelete();
 
             $table->text('body');
             $table->tinyInteger('rating');

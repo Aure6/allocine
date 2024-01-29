@@ -10,8 +10,8 @@ class Category extends Model
 {
     use HasFactory;
 
-    public function works(): HasMany
+    public function medias(): HasMany
     {
-        return $this->hasMany(Review::class);
+        return $this->hasMany(Media::class);
     }
 }

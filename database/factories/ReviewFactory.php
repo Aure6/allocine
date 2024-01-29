@@ -2,8 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Media;
 use App\Models\User;
-use App\Models\Work;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -24,7 +24,7 @@ class ReviewFactory extends Factory
             'img_path' => 'placeholder.jpg',
             'published_at' => fake()->dateTimeBetween('-2 months', '+ 1 month'),
             'user_id' => User::get()->random()->id,
-            'work_id' => Work::get()->random()->id,
+            'media_id' => Media::get()->random()->id,
         ];
     }
 }
