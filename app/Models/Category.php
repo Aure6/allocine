@@ -10,6 +10,13 @@ class Category extends Model
 {
     use HasFactory;
 
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'categories';
+
     public function medias(): HasMany
     {
         return $this->hasMany(Media::class);
